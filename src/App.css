@@ -1,38 +1,296 @@
 .App {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*COMPONENTE NAV,*/
+.nav {
+  position: fixed;
+  top: 0;
+  width:  1230px;
+  z-index: 1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav__header{
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav__nameuser{
+  font-size: 40px;
+  
+}
+
+.nav__nameuser__text{
+  color: #05F9F6;
+}
+
+.nav__item .links{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav__item .links .link {
+  color: white;
+  text-decoration: none;
+}
+
+
+/*COMPONENTE HOME,*/
+.home{
+  background: #323234;
+  height: 570px;
+  width:  1230px;
+  padding-top: 120px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.home__content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Esto coloca los elementos al principio y al final */
+  align-items: center; 
+}
+
+
+.home__presentation{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.home__greetings{
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 42px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.home__selftDescription,
+.home__selftDescription--colored {
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 42px;
+}
+
+.home_firstLastName{
+  font-family: "Odor Mean Chey", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 42px;
+  margin-left: 30px;
+}
+
+.home__selftDescription--colored{
+  color: #05F9F6;
+}
+
+.home__summary{
+  color: #A59A9A;
+  width: 700px;
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  margin-left: 30px;
+
+}
+
+.home__button {
+  background: #05F9F6;
+  width: 300px;
+  height: 60px;
+  border-radius: 30px;
+  color: white;
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+}
+
+.home__profilePicture{
+  background-image: url(/src/assets/profileUser.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #272727;
+  align-self: center;
+  width: 260px;
+  height: 260px;
+  margin: 0 auto;
+  border-radius: 50%;
+  animation: morph 8s ease-in-out infinite 1s;
+  box-shadow: 0 0 20px #05F9F6, /* sombra principal */
+              0 0 40px #05F9F6, /* sombra secundaria */
+              0 0 60px #05F9F6, /* sombra terciaria */
+              0 0 80px #05F9F6; 
+}
+
+@keyframes morph {
+  0%{
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
-  to {
-    transform: rotate(360deg);
+  50%{
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 30%;
   }
+  100%{
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+
+/*COMPONENTE SERVICES,*/
+
+.servicesContainer{
+  height: 570px;
+  width: 1230px;
+  padding-top: 120px;
+}
+
+.services__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services__title {
+  color: white;
+}
+
+.row1, .row2 {
+  display: flex;
+  gap: 50px;
+  margin-top: 15px;
+}
+
+.card {
+  width: 240px;
+  height: 230px;
+  border-radius: 20px;
+  background-color: #272727;
+  color: white;
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.card__title{
+  font-size: 22px;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+.card__summary{
+  font-size: 16px;
+  padding: 0 10px;
+  margin: auto 0;
+  height: 108px;
+}
+
+
+/*COMPONENTE Skills,*/
+.skills{
+  background: #323234;
+  height: 570px;
+  width: 1230px;
+  margin-top: 200px;
+}
+
+.skills__container{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+
+}
+
+.skills__Title{
+}
+
+.skill__card{
+  width: 200px;
+  height: 200px;
+  background: #272727;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.skill__cardIcons{
+  color: #74C0FC; /* Cambiar el color del icono */
+  font-size: 84px; /* Cambiar el tamaño del icono */
+  margin-right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.css{
+  display: flex;
+  color: #254bdd;
+}
+
+.html{
+  color: #e5532d;
+}
+
+.flutter{
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%233fb6d3' d='M12.3 64.2L76.3 0h39.4L32.1 83.6zm64 63.8h39.4L81.6 93.9l34.1-34.8H76.3L42.2 93.5z'/%3E%3Cpath fill='%2327aacd' d='m81.6 93.9l-20-20l-19.4 19.6l19.4 19.6z'/%3E%3Cpath fill='%2319599a' d='M115.7 128L81.6 93.9l-20 19.2L76.3 128z'/%3E%3ClinearGradient id='deviconFlutter0' x1='59.365' x2='86.825' y1='116.36' y2='99.399' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%231b4e94'/%3E%3Cstop offset='.63' stop-color='%231a5497'/%3E%3Cstop offset='1' stop-color='%23195a9b'/%3E%3C/linearGradient%3E%3Cpath fill='url(%23deviconFlutter0)' d='m61.6 113.1l30.8-8.4l-10.8-10.8z'/%3E%3C/svg%3E");
+}
+
+.js{
+  color: #efd81d;
+}
+
+.github{
+  color: #000;
+}
+
+.firebase{
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23ffa000' d='M17.474 103.276L33.229 2.462a2.91 2.91 0 0 1 5.44-.924l16.294 30.39l6.494-12.366a2.91 2.91 0 0 1 5.15 0l43.97 83.714z'/%3E%3Cpath fill='%23f57c00' d='M71.903 64.005L54.955 31.913l-37.481 71.363Z'/%3E%3Cpath fill='%23ffca28' d='M110.577 103.276L98.51 28.604a2.913 2.913 0 0 0-1.984-2.286a2.906 2.906 0 0 0-2.94.714l-76.112 76.243l42.115 23.618a8.728 8.728 0 0 0 8.51 0l42.478-23.618Z'/%3E%3Cpath fill='%23fff' fill-opacity='0.2' d='M98.51 28.604a2.913 2.913 0 0 0-1.984-2.286a2.906 2.906 0 0 0-2.94.713L78.479 42.178L66.6 19.562a2.91 2.91 0 0 0-5.15 0l-6.494 12.365L38.662 1.538A2.91 2.91 0 0 0 35.605.044a2.907 2.907 0 0 0-2.384 2.425L17.474 103.276h-.051l.05.058l.415.204l75.676-75.764a2.91 2.91 0 0 1 4.932 1.571l11.965 74.003l.116-.073zm-80.898 74.534L33.228 3.182A2.91 2.91 0 0 1 35.613.756a2.911 2.911 0 0 1 3.057 1.495l16.292 30.39l6.495-12.366a2.91 2.91 0 0 1 5.15 0L78.245 42.41L17.61 103.138Z'/%3E%3Cpath fill='%23a52714' d='M68.099 126.18a8.728 8.728 0 0 1-8.51 0l-42.015-23.55l-.102.647l42.115 23.61a8.728 8.728 0 0 0 8.51 0l42.48-23.61l-.11-.67l-42.37 23.575z' opacity='0.2'/%3E%3C/svg%3E");
+}
+
+.java {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%230074bd' d='M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092c0 0 2.871 1.795 6.873 3.351c-24.439 10.47-55.308-.607-36.115-5.969m-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6c0 0 1.993 2.025 5.132 3.131c-29.542 8.64-62.446.68-41.309-6.336'/%3E%3Cpath fill='%23ea2d2e' d='M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58c0 .001-42.731 10.67-22.324 34.187'/%3E%3Cpath fill='%230074bd' d='M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171c-4.451-1.938 3.899-4.625 6.526-5.192c2.739-.593 4.303-.485 4.303-.485c-4.953-3.487-32.013 6.85-13.743 9.815c49.821 8.076 90.817-3.637 77.896-9.468M49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326c9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958c10.832-5.239 19.644-4.643 19.644-4.643m40.697 22.747c23.421-12.167 12.591-23.86 5.032-22.285c-1.848.385-2.677.72-2.677.72s.688-1.079 2-1.543c14.953-5.255 26.451 15.503-4.823 23.725c0-.002.359-.327.468-.617'/%3E%3Cpath fill='%23ea2d2e' d='M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559c-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587'/%3E%3Cpath fill='%230074bd' d='M52.214 126.021c22.476 1.437 57-.8 57.817-11.436c0 0-1.571 4.032-18.577 7.231c-19.186 3.612-42.854 3.191-56.887.874c0 .001 2.875 2.381 17.647 3.331'/%3E%3C/svg%3E");
+}
+
+
+/*COMPONENTE PROYECTS,*/
+
+.proyects{
+  background: #323234;
+  height: 570px;
+  width: 1230px;
+  margin-top: 200px;
 }
