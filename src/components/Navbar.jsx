@@ -5,7 +5,7 @@ export function Navbar() {
   return (
     <div className='nav'>
       <header className="nav__header">
-        <div className="nav__nameuser"><span className="nav__nameuser__text">Yosh</span> Escorcia</div>
+        <div className="nav__nameuser"><span className="nav__nameuser__text">Junior</span> Developer</div>
         <nav className="nav__item">
           <ul className="links">
             <li>
@@ -25,12 +25,12 @@ export function Navbar() {
               <a href="#proyects" className="link"></a>
             </li>
             <li>
-              <Link to="cv" smooth={true} duration={500} className="link">CV</Link>
-              <a href="#cv" className="link"></a>
-            </li>
-            <li>
               <Link to="contact" smooth={true} duration={500} className="link">Contact</Link>
               <a href="#contact" className="link"></a>
+            </li>
+            <li>
+              <Link to="cv" smooth={true} duration={500} className="link">Download-CV</Link>
+              <a href="#cv" className="link"></a>
             </li>
           </ul>
         </nav>
