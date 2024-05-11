@@ -13,16 +13,16 @@ export function Navbar() {
               <a href="#home" className="link"></a>
             </li>
             <li>
-              <Link to="services" smooth={true} duration={500} className="link">Services</Link>
-              <a href="#services" className="link"></a>
+              <Link to="proyects" smooth={true} duration={500} className="link">Proyects</Link>
+              <a href="#proyects" className="link"></a>
             </li>
             <li>
               <Link to="skills" smooth={true} duration={500} className="link">Skills</Link>
               <a href="#skills" className="link"></a>
             </li>
             <li>
-              <Link to="proyects" smooth={true} duration={500} className="link">Proyects</Link>
-              <a href="#proyects" className="link"></a>
+              <Link to="services" smooth={true} duration={500} className="link">Services</Link>
+              <a href="#services" className="link"></a>
             </li>
             <li>
               <Link to="contact" smooth={true} duration={500} className="link">Contact</Link>

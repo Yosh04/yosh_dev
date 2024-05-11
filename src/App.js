@@ -12,9 +12,9 @@ function App() {
       <div className="App">
         <Navbar/>
         <Home/>
-        <Services/>
-        <Skills/>
         <Proyects/>
+        <Skills/>
+        <Services/>
         <Contact/>
       </div>
   );
