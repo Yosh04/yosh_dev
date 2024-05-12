@@ -35,13 +35,13 @@
   color: #05F9F6;
 }
 
-.nav__item .links {
+.links {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-.nav__item .links .link {
+.link {
   color: white;
   text-decoration: none;
 }
@@ -225,7 +225,6 @@
 
 }
 
-.skills__Title {}
 
 .skill__card {
   width: 200px;

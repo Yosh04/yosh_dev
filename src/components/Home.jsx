@@ -8,6 +8,14 @@ export function Home() {
     typeSpeed: 20,
   });
 
+  const URL_CV =
+    "https://drive.google.com/uc?export=download&id=1AoEZpzjodozG2a4CSNDIixb8Nd_xiEpI";
+
+  const handleDescargarCV = () => {
+    // Simplemente redirecciona al usuario a la URL de descarga del CV
+    window.location.href = URL_CV;
+  };
+
   return (
     <div id="home" className="home">
       <section className="home__content">
@@ -22,7 +30,7 @@ export function Home() {
             me, development is functional art that enhances the user
             experience."
           </p>
-          <button className="home__button">Download CV</button>
+          <button className="home__button"><a href={URL_CV} download className="link" onClick={handleDescargarCV}>Download CV</a></button>
         </div>
         <div className="home__profilePicture">
         </div>
