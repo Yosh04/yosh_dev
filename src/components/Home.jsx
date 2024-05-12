@@ -30,7 +30,7 @@ export function Home() {
             me, development is functional art that enhances the user
             experience."
           </p>
-          <button className="home__button"><a href={URL_CV} download className="link" onClick={handleDescargarCV}>Download CV</a></button>
+          <button className="home__button"><a href={URL_CV} download className="link--activate" onClick={handleDescargarCV}>Download CV</a></button>
         </div>
         <div className="home__profilePicture">
         </div>
