@@ -34,7 +34,7 @@ export function Navbar() {
         <div className="text-4xl">
           <span className="text-[#05F9F6]">Junior</span> Developer
         </div>
-        <nav className="hidden lg:block">
+        <nav className="hidden md:block">
           <ul className="list-none flex gap-5">
             {navItems.map((item) => (
               <li key={item.href}>
@@ -45,14 +45,14 @@ export function Navbar() {
             ))}
           </ul>
         </nav>
-        <div className="lg:hidden">
+        <div className="md:hidden">
           <button onClick={toggleMenu} className="text-white">
             <p>Menu </p> 
           </button>
         </div>
       </header>
       {isMenuOpen && (
-        <div className="lg:hidden fixed right-0 top-0 h-1/2 w-1/3 bg-gray-800 p-5">
+        <div className="md:hidden fixed right-0 top-0 h-1/2 w-1/3 bg-gray-800 p-5">
           <button onClick={toggleMenu} className="text-white text-2xl mb-5">
             X 
           </button>
