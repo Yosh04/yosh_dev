@@ -1,57 +1,34 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact } from "@fortawesome/free-brands-svg-icons"; // Importa el ícono faReact desde los íconos de marcas
-import { faCss3Alt } from "@fortawesome/free-brands-svg-icons";
-import { faHtml5 } from "@fortawesome/free-brands-svg-icons";
-import { faJs } from "@fortawesome/free-brands-svg-icons";
-import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact, faCss3Alt, faPhp, faJs, faGithubSquare, faFlutter } from '@fortawesome/free-brands-svg-icons';
+
+const skills = [
+  { name: 'React', icon: faReact, color: 'text-blue-600' },       // React - blue
+  { name: 'CSS', icon: faCss3Alt, color: 'text-blue-400' },      // CSS - light blue
+  { name: 'HTML', icon: faPhp, color: 'text-orange-500' },       // HTML - orange
+  { name: 'JavaScript', icon: faJs, color: 'text-yellow-500' },   // JavaScript - yellow
+  { name: 'GitHub', icon: faGithubSquare, color: 'text-gray-700' }, // GitHub - dark gray
+  { name: 'Flutter', icon: faFlutter, color: 'text-blue-400' },   // Flutter - light blue
+  // Puedes agregar Firebase y otras habilidades con colores aquí
+];
+
 export default function Skills() {
   return (
-    <div className="skills">
-      <section className="skills__container">
-        <h2 className="skills__Title">My Skills</h2>
-        <div className="row1">
-          <div className="skill__card">
-            <span className="skill__cardIcons react">
-              <FontAwesomeIcon icon={faReact} />
-            </span>
-            <span className="skill__cardTitle">React</span>
-          </div>
-          <div className="skill__card">
-            <span className="skill__cardIcons">
-              <FontAwesomeIcon className="css" icon={faCss3Alt} />
-              <FontAwesomeIcon className="html" icon={faHtml5} />
-            </span>
-            <span className="skill__cardTitle">CSS & HTML</span>
-          </div>
-          <div className="skill__card">
-            <span className="skill__cardIcons flutter"></span>
-            <span className="skill__cardTitle">Flutter</span>
-          </div>
-          <div className="skill__card">
-            <span className="skill__cardIcons js">
-              <FontAwesomeIcon icon={faJs} />
-            </span>
-            <span className="skill__cardTitle ">JavaScript</span>
-          </div>
+    <section className="bg-[#323234] py-10">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-white mb-6 text-center">Habilidades</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className={`py-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 `}
+            >
+              <FontAwesomeIcon icon={skill.icon} className={`mx-auto mb-4 h-16 w-16 ${skill.color} `} />
+              <h3 className="text-xl text-white">{skill.name}</h3>
+            </div>
+          ))}
         </div>
-        <div className="row2">
-          <div className="skill__card">
-            <span className="skill__cardIcons">
-              <FontAwesomeIcon className="github" icon={faGithubSquare} />
-            </span>
-            <span className="skill__cardTitle">Github</span>
-          </div>
-          <div className="skill__card">
-            <span className="skill__cardIcons firebase"></span>
-            <span className="skill__cardTitle">Firebase</span>
-          </div>
-          <div className="skill__card">
-            <span className="skill__cardIcons java"></span>
-            <span className="skill__cardTitle">Java</span>
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

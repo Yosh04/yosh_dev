@@ -38,8 +38,8 @@ export function Navbar() {
           <ul className="list-none flex gap-5">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className="text-white no-underline hover:no-underline">
-                  {item.label}
+                <a href={item.href} className=" no-underline hover:no-underline">
+                <p className="text-2xl md:text-[17px] ">{item.label}</p>
                 </a>
               </li>
             ))}
@@ -59,8 +59,8 @@ export function Navbar() {
           <ul className="list-none flex flex-col gap-5">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className="text-white no-underline hover:no-underline" onClick={toggleMenu}>
-                  {item.label}
+                <a href={item.href} className="no-underline hover:no-underline" onClick={toggleMenu}>
+                  <p className="text-2xl">{item.label}</p>
                 </a>
               </li>
             ))}
