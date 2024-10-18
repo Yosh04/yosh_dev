@@ -37,9 +37,9 @@ export function Services() {
   return (
     <div
       id="services"
-      className="flex flex-col items-center"
+      className="flex flex-col items-center font-itim"
     >
-      <section className="text-center">
+      <section className="text-center ">
         <h2 className="text-white text-2xl font-semibold mb-6">Services to be offered</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (

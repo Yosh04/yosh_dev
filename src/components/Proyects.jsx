@@ -181,7 +181,7 @@ export default function Projects() {
       </div>
 
       <div className="flex flex-col items-center sm:grid sm:grid-cols-2 gap-4 lg:hidden">
-        <div class="flex flex-col sm:w-[380px] sm:h-[380px]  w-[350px] h-[350px]  rounded-lg shadow-lg border-2 border-green-400">
+        <div class="flex flex-col sm:w-[380px] sm:h-[380px]  w-[350px] h-[350px]  rounded-lg shadow-lg ">
           <div className="relative flex flex-1 [perspective:1000px] group">
             <div className="absolute inset-0 [transform-style:preserve-3d] transition-all duration-500 ease-in-out group-hover:[transform:rotateY(180deg)]">
               <div className="absolute inset-0 [backface-visibility:hidden]">
